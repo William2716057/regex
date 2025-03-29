@@ -15,7 +15,9 @@ text = "text    with spaces    in it"
 cleaned_text = re.sub(r'\s+', ' ', text).strip()
 print(cleaned_text)
 
-dates = re.findall(r'\b\d{4}-\d{2}-\d{2}|\b\d{2}/\d{2}/\d{4}|\b\d{2}-\d{2}-\d{4}', text)
+date_text = "Here are some dates in various formats 2025-03-30, 03/30/2025, 30-03-2025"
+
+dates = re.findall(r'\b\d{4}-\d{2}-\d{2}|\b\d{2}/\d{2}/\d{4}|\b\d{2}-\d{2}-\d{4}', date_text)
 print(dates)
 
 log_data = "login from 192.168.1.100, 203.0.113.45 and 8.8.8.8."
